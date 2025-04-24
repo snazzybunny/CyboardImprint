@@ -58,7 +58,7 @@
 &to 0        &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3                       &bt BT_SEL 4               &trans  &trans  &trans  &trans  &trans  &trans
 &bootloader  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI                    &rgb_ug RGB_EFF            &trans  &trans  &trans  &trans  &trans  &trans
 &sys_reset   &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD                    &rgb_ug RGB_EFR            &trans  &trans  &trans  &trans  &trans  &trans
-&to 0        &trans           &trans           &rgb_ug RGB_TOG  &rgb_ug RGB_COLOR_HSB(339,93,84)                                     &trans  &trans  &trans  &trans  &trans
+&to 0        &trans           &trans           &rgb_ug RGB_TOG  &rgb_ug RGB_COLOR_HSB(345,100,50)                                     &trans  &trans  &trans  &trans  &trans
                                                                 &trans                             &trans           &trans    &trans  &trans  &trans
                                                                 &trans                             &trans           &trans    &trans  &trans  &trans
             >;
@@ -91,13 +91,13 @@
 
 &trackball_central_listener {
     input-processors =
-        // this gets it to the default installation orientation,,,,,,,,,,,,,,,,,,,,,,
-        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,,,,,
-        // multiply sensitivity by 1, divide by 25 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,
+        // this gets it to the default installation orientation,,,,,,,,,,,,,,,,,,,,,,,
+        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,,,,,,
+        // multiply sensitivity by 1, divide by 25 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_scaler 1 25>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
         <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>;
 };
