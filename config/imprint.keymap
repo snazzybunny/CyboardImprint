@@ -21,7 +21,7 @@
 &kp GRAVE   &kp Z   &kp X   &kp C     &kp V           &kp B                  &kp N         &kp M      &kp COMMA        &kp DOT  &kp FSLH  &kp PAGE_DOWN
 &trans      &trans  &trans  &kp LEFT  &kp RIGHT                                            &kp UP     &kp DOWN         &trans   &trans    &trans
                                       &kp LEFT_SHIFT  &kp LCTRL  &kp DEL     &kp LEFT_GUI  &kp RCTRL  &kp RIGHT_SHIFT
-                                      &kp SPACE       &mo 1      &kp LALT    &kp RALT      &kp ENTER  &kp BACKSPACE
+                                      &lt 2 SPACE     &mo 1      &kp LALT    &kp RALT      &kp ENTER  &kp BACKSPACE
             >;
         };
 
@@ -34,7 +34,7 @@
 &trans            &trans          &trans       &trans    &kp QUESTION  &trans            &kp ASTRK  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EXCLAMATION  &kp LG(BACKSLASH)  &trans
 &kp C_PLAY_PAUSE  &kp C_NEXT      &trans       &trans    &trans                                     &kp LESS_THAN         &kp GREATER_THAN       &trans           &kp C_VOLUME_UP    &kp C_VOLUME_DOWN
                                                          &trans        &trans  &trans    &mkp MB1   &mkp MB3              &mkp MB2
-                                                         &trans        &trans  &trans    &trans     &trans                &mo 2
+                                                         &trans        &trans  &trans    &trans     &trans                &trans
             >;
         };
 
@@ -53,14 +53,14 @@
 
         Keyboard_Control_Layer {
             bindings = <
-&trans       &trans           &trans           &trans           &trans                            &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans           &trans           &trans           &trans                            &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-&to 0        &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3                      &bt BT_SEL 4               &trans  &trans  &trans  &trans  &trans  &trans
-&bootloader  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI                   &rgb_ug RGB_EFF            &trans  &trans  &trans  &trans  &trans  &trans
-&sys_reset   &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD                   &rgb_ug RGB_EFR            &trans  &trans  &trans  &trans  &trans  &trans
-&to 0        &trans           &trans           &rgb_ug RGB_TOG  &rgb_ug RGB_COLOR_HSB(2, 90, 17)                                    &trans  &trans  &trans  &trans  &trans
-                                                                &trans                            &trans           &trans    &trans  &trans  &trans
-                                                                &trans                            &trans           &trans    &trans  &trans  &trans
+&trans       &trans           &trans           &trans           &trans                          &trans                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans           &trans           &trans           &trans                          &trans                     &trans  &trans  &trans  &trans  &trans  &trans
+&to 0        &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3                    &bt BT_SEL 4               &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI                 &rgb_ug RGB_EFF            &trans  &trans  &trans  &trans  &trans  &trans
+&sys_reset   &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD                 &rgb_ug RGB_EFR            &trans  &trans  &trans  &trans  &trans  &trans
+&to 0        &trans           &trans           &rgb_ug RGB_TOG  &rgb_ug RGB_COLOR_HSB(2,90,17)                                     &trans  &trans  &trans  &trans  &trans
+                                                                &trans                          &trans           &trans    &trans  &trans  &trans
+                                                                &trans                          &trans           &trans    &trans  &trans  &trans
             >;
         };
 
@@ -91,13 +91,13 @@
 
 &trackball_central_listener {
     input-processors =
-        // this gets it to the default installation orientation,,,,,,,,,,,,,,,,,,,,,,,,,,
-        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,,,,,,,,,
-        // multiply sensitivity by 1, divide by 25 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,
+        // this gets it to the default installation orientation,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,,,,,,,,,,
+        // multiply sensitivity by 1, divide by 25 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_scaler 1 25>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
         <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>;
 };
